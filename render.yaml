@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ug-extractor-pro
+    env: python
+    plan: free
+    healthCheckPath: "/"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: ADMIN_KEY
+        sync: false
+      - key: ORG_LIST
+        value: "ixgioj:735592:Classplus"
+      - key: EMAIL_ADDRESS
+        sync: false
+      - key: EMAIL_APP_PASSWORD
+        sync: false

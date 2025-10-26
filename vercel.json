@@ -1,0 +1,8 @@
+{
+  "builds": [{ "src": "main.py", "use": "@vercel/python" }],
+  "routes": [
+    { "src": "/send-otp", "dest": "/main.py" },
+    { "src": "/verify-otp", "dest": "/main.py" },
+    { "src": "/(.*)", "dest": "/main.py" }
+  ]
+}
